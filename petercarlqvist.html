@@ -29,6 +29,32 @@
         <input type="email" id="email" name="email">
         <span class="error" id="emailError"></span>
     </div>
+    <h2>Quiz Questions</h2>
+
+    <!-- Question 1 (with radio Buttons) -->
+    <div>
+        <p>1. In Dicken's 'Tale of two cities - one city was Paris, which was the other? *</p>
+        <input type="radio" name="q1" value="London" id="london">
+        <label for="london">Paris</label><br>
+        <input type="radio" name="q1" value="Vienna" id="vienna">
+        <label for="vienna">Vienna</label><br>
+        <input type="radio" name="q1" value="Rome" id="rome">
+        <label for="rome">Rome</label>
+        <span class="error" id="q1Error"></span>
+    </div>
+
+    <div>
+        <p>2. What can you find in Paris? - select all that apply. *</p>
+        <input type="checkbox" name="q2" value="MTussauds" id="mtussauds">
+        <label for="mtussauds">Madame Tussauds</label>
+
+        <input type="checkbox" name="q2" value="Garnier" id="garnier">
+        <label for="garnier">Opera Garnier</label>
+
+        <input type="checkbox" name="q2" value="Triomphe" id="triomphe">
+        <label for="triomphe">Arc de Triomphe</label>
+    </div>
+
 </form>
 </body>
 </html>
