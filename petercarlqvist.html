@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
     <!-- <link rel="stylesheet" href="styles.css">  If needed for styling later -->
-    <script defer src="petercarlqvist.js"></script> <! --specify js file -->
+    <script defer src="petercarlqvist.js"></script> <!--specify js file -->
 </head>
 <body>
 <! -- Start form -->
@@ -33,7 +33,7 @@
 
     <!-- Question 1 (with radio Buttons) -->
     <div>
-        <p>1. In Dicken's 'Tale of two cities - one city was Paris, which was the other? *</p>
+        <p>1. In Dicken's 'Tale of two cities - one city was Paris, which was the other? </p>
         <input type="radio" name="q1" value="London" id="london">
         <label for="london">London</label><br>
         <input type="radio" name="q1" value="Vienna" id="vienna">
@@ -56,10 +56,34 @@
         <span class="error" id="q2Error"></span>
     </div>
 
+
+    <!-- Question 4 (with radio buttons) -->
     <div>
-       <!-- free-text question -->
+        <p>3. Which river flows through Paris? </p>
+        <input type="radio" name="q4" value="Seine" id="seine" required>
+        <label for="seine">Seine</label><br>
+        <input type="radio" name="q4" value="Thames" id="thames">
+        <label for="thames">Thames</label><br>
+        <input type="radio" name="q4" value="Danube" id="danube">
+        <label for="danube">Danube</label>
+        <span class="error" id="q4Error"></span>
+    </div>
+
+    <!-- Question 5 (with radio buttons) -->
+    <div>
+        <p>4. What is the name of the famous museum in Paris that houses the Mona Lisa? *</p>
+        <input type="radio" name="q5" value="Louvre" id="louvre" required>
+        <label for="louvre">Louvre</label><br>
+        <input type="radio" name="q5" value="Metropolitan" id="metropolitan">
+        <label for="metropolitan">Metropolitan Museum</label><br>
+        <input type="radio" name="q5" value="Hermitage" id="hermitage">
+        <label for="hermitage">Hermitage</label>
+        <span class="error" id="q5Error"></span>
+    </div>
+    <div>
+        <!-- free-text question -->
         <div>
-            <P>3. What are your favorite things about Paris?</P>
+            <P>5. What are your favorite things about Paris? *</P>
             <label for="favoriteThings"></label>
             <input type="text" id="favoriteThings" name="favoriteThings">
             <span class="error" id="favoriteThingsError"></span>
