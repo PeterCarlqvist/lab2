@@ -4,46 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
-    <!-- <link rel="stylesheet" href="styles.css">  If needed for styling later -->
+    <link rel="stylesheet" href="petercarlqvist.css">  <!-- styling -->
     <script defer src="petercarlqvist.js"></script> <!--specify js file -->
 </head>
-<body>
-<! -- Start form -->
-<h1>Welcome to Peter's Quiz!</h1>
 
+<body>
+
+
+<! -- Start form -->
 <form id="quizForm">
-    <div>
+    <h1>Welcome to Peter's Paris Quiz!</h1>
+    <div id="personalInfo">
+
+    <div class="form-group">
         <label for="firstName">First Name *</label>
         <input type="text" id="firstName" name="firstName">
         <span class="error" id="firstNameError"></span>
     </div>
 
-    <div>
+    <div class="form-group">
         <label for="lastName">Last Name *</label>
         <input type="text" id="lastName" name="lastName">
         <span class="error" id="lastNameError"></span>
     </div>
 
-    <div>
+    <div class="form-group">
         <label for="email">Email *</label>
         <input type="email" id="email" name="email">
         <span class="error" id="emailError"></span>
     </div>
-    <h2>Quiz Questions</h2>
 
-    <!-- Question 1 (with radio Buttons) -->
-    <div>
+    </div>
+
+    <h2>Quiz Questions</h2>
+    <div id="quizQuestions" >
+
+    <!-- Question 1 (with dropdown list) -->
+    <div class="question">
         <p>1. In Dicken's 'Tale of two cities - one city was Paris, which was the other? </p>
-        <input type="radio" name="q1" value="London" id="london">
-        <label for="london">London</label><br>
-        <input type="radio" name="q1" value="Vienna" id="vienna">
-        <label for="vienna">Vienna</label><br>
-        <input type="radio" name="q1" value="Rome" id="rome">
-        <label for="rome">Rome</label>
+        <select id="cityDropdown" name="cityDropdown">
+            <option value="" selected disabled>Select an option</option>
+            <option value="London">London</option>
+            <option value="Vienna">Vienna</option>
+            <option value="Rome">Rome</option>
+        </select>
         <span class="error" id="q1Error"></span>
     </div>
 
-    <div>
+    <div class="question">
+    <!-- Question 2 (checkboxes) -->
         <p>2. What can you find in Paris? - select all that apply. *</p>
         <input type="checkbox" name="q2" value="MTussauds" id="mtussauds">
         <label for="mtussauds">Madame Tussauds</label>
@@ -57,42 +66,45 @@
     </div>
 
 
-    <!-- Question 4 (with radio buttons) -->
-    <div>
+    <!-- Question 3 (with radio buttons) -->
+    <div class="question">
         <p>3. Which river flows through Paris? </p>
-        <input type="radio" name="q4" value="Seine" id="seine" required>
+        <input type="radio" name="q3" value="Seine" id="seine">
         <label for="seine">Seine</label><br>
-        <input type="radio" name="q4" value="Thames" id="thames">
+        <input type="radio" name="q3" value="Thames" id="thames">
         <label for="thames">Thames</label><br>
-        <input type="radio" name="q4" value="Danube" id="danube">
+        <input type="radio" name="q3" value="Danube" id="danube">
         <label for="danube">Danube</label>
+        <span class="error" id="q3Error"></span>
+    </div>
+
+    <!-- Question 4 (with radio buttons) -->
+    <div class="question">
+        <p>4. What is the name of the famous museum in Paris that houses the Mona Lisa? *</p>
+        <input type="radio" name="q4" value="Louvre" id="louvre">
+        <label for="louvre">Louvre</label><br>
+        <input type="radio" name="q4" value="Metropolitan" id="metropolitan">
+        <label for="metropolitan">Metropolitan Museum</label><br>
+        <input type="radio" name="q4" value="Hermitage" id="hermitage">
+        <label for="hermitage">Hermitage</label>
         <span class="error" id="q4Error"></span>
     </div>
 
-    <!-- Question 5 (with radio buttons) -->
-    <div>
-        <p>4. What is the name of the famous museum in Paris that houses the Mona Lisa? *</p>
-        <input type="radio" name="q5" value="Louvre" id="louvre" required>
-        <label for="louvre">Louvre</label><br>
-        <input type="radio" name="q5" value="Metropolitan" id="metropolitan">
-        <label for="metropolitan">Metropolitan Museum</label><br>
-        <input type="radio" name="q5" value="Hermitage" id="hermitage">
-        <label for="hermitage">Hermitage</label>
-        <span class="error" id="q5Error"></span>
-    </div>
-    <div>
         <!-- free-text question -->
-        <div>
-            <P>5. What are your favorite things about Paris? *</P>
+
+        <div class="question">
+            <p>5. What are your favorite things about Paris? </p>
             <label for="favoriteThings"></label>
             <input type="text" id="favoriteThings" name="favoriteThings">
             <span class="error" id="favoriteThingsError"></span>
         </div>
 
-
+    <div class="submitbutton">
         <!-- add submit button -->
         <button type="submit">Submit</button>
         <span class="success" id="successMessage"></span>
+
+    </div>
 
     </div>
 

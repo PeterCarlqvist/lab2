@@ -8,6 +8,7 @@ document.getElementById('quizForm').addEventListener('submit', function(event) {
 
     // Validate First Name (Only Letters)
     const firstName = document.getElementById('firstName').value.trim();
+    // use the test method of reg ex to check if input is valid
     if (!/^[A-Za-z]+$/.test(firstName)) {
         showError('firstNameError', 'First name is required and must contain only letters.');
         isValid = false;
@@ -28,31 +29,32 @@ document.getElementById('quizForm').addEventListener('submit', function(event) {
         isValid = false;
     }
 
-    // Validate Question 1 (Radio Button)
-    const q1Checked = document.querySelector('input[name="q1"]:checked');
-    if (!q1Checked) {
-        showError('q1Error', 'Please select an answer for Question 1.');
-        isValid = false;
-    }
-
     // Validate Question 2 (Checkboxes)
-    // Validera fråga 2 (checkboxar, minst ett val måste vara gjort)
     const q2Checked = document.querySelectorAll('input[name="q2"]:checked');
     if (q2Checked.length === 0) {
-        showError('q2Error', 'Please select at least one option.');
+        showError('q2Error', 'Please select at least one option for Question 2.');
         isValid = false;
     }
 
-    // Visa framgångsmeddelande om allt är korrekt
+    // Validate Question 4 (Radio buttons)
+    const q4Checked = document.querySelector('input[name="q4"]:checked');
+    if (!q4Checked) {
+        showError('q4Error', 'Please select an answer for Question 4.');
+        isValid = false;
+    }
+
+    // Display success message if all inputs are valid
     if (isValid) {
         document.getElementById('successMessage').textContent = 'All information has been added correctly';
     }
 });
 
+// function to display error message
 function showError(elementId, message) {
     document.getElementById(elementId).textContent = message;
 }
 
+// clear user generated errors
 function clearErrors() {
     const errorElements = document.querySelectorAll('.error');
     errorElements.forEach(function (el) {
