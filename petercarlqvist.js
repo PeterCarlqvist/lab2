@@ -43,6 +43,14 @@ document.getElementById('quizForm').addEventListener('submit', function(event) {
         isValid = false;
     }
 
+    // validate question 5
+    const q5Answer = document.getElementById('favoriteThings').value.trim();
+    if (q5Answer === '') {
+        showError('q5Error', 'Please provide an answer for Question 5.');
+        isValid = false;
+    }
+
+
     // Display success message if all inputs are valid
     if (isValid) {
         document.getElementById('successMessage').textContent = 'All information has been added correctly';

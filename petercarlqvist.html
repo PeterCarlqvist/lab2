@@ -40,34 +40,31 @@
     <div id="quizQuestions" >
 
     <!-- Question 1 (with dropdown list) -->
-    <div class="question">
-        <p>1. In Dicken's 'Tale of two cities - one city was Paris, which was the other? </p>
-        <select id="cityDropdown" name="cityDropdown">
+        <div class="question">
+            <p>1. In Dicken's 'Tale of two cities - one city was Paris, which was the other? </p>
+            <label for="cityDropdown"></label><select id="cityDropdown" name="cityDropdown">
             <option value="" selected disabled>Select an option</option>
             <option value="London">London</option>
             <option value="Vienna">Vienna</option>
             <option value="Rome">Rome</option>
         </select>
-        <span class="error" id="q1Error"></span>
-    </div>
+            <span class="error" id="q1Error"></span>
 
-    <div class="question">
-    <!-- Question 2 (checkboxes) -->
-        <p>2. What can you find in Paris? - select all that apply. *</p>
-        <input type="checkbox" name="q2" value="MTussauds" id="mtussauds">
-        <label for="mtussauds">Madame Tussauds</label>
+            <!-- Question 2 (checkboxes) -->
+            <p>2. What can you find in Paris? - select all that apply. *</p>
+            <input type="checkbox" name="q2" value="MTussauds" id="mtussauds">
+            <label for="mtussauds">Madame Tussauds</label>
 
-        <input type="checkbox" name="q2" value="Garnier" id="garnier">
-        <label for="garnier">Opera Garnier</label>
+            <input type="checkbox" name="q2" value="Garnier" id="garnier">
+            <label for="garnier">Opera Garnier</label>
 
-        <input type="checkbox" name="q2" value="Triomphe" id="triomphe">
-        <label for="triomphe">Arc de Triomphe</label>
-        <span class="error" id="q2Error"></span>
-    </div>
+            <input type="checkbox" name="q2" value="Triomphe" id="triomphe">
+            <label for="triomphe">Arc de Triomphe</label>
+            <span class="error" id="q2Error"></span>
+        </div>
 
 
-    <!-- Question 3 (with radio buttons) -->
-    <div class="question">
+        <div class="question">
         <p>3. Which river flows through Paris? </p>
         <input type="radio" name="q3" value="Seine" id="seine">
         <label for="seine">Seine</label><br>
@@ -96,7 +93,7 @@
             <p>5. What are your favorite things about Paris? </p>
             <label for="favoriteThings"></label>
             <input type="text" id="favoriteThings" name="favoriteThings">
-            <span class="error" id="favoriteThingsError"></span>
+            <span class="error" id="q5Error"></span>
         </div>
 
     <div class="submitbutton">
